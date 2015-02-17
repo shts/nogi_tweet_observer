@@ -4,14 +4,14 @@ require 'tweetstream'
 require 'parse-ruby-client'
 require 'uri'
 
-Parse.init :application_id => PARSE_APP_ID,
-           :api_key        => PARSE_API_KEY
+Parse.init :application_id => ENV['PARSE_APP_ID'],
+           :api_key        => ENV['PARSE_API_KEY']
 
 TweetStream.configure do |config|
-  config.consumer_key       = TWITTER_CONSUMER_KEY
-  config.consumer_secret    = TWITTER_CONSUMER_SECRET
-  config.oauth_token        = TWITTER_OAUTH_TOKEN
-  config.oauth_token_secret = TWITTER_OAUTH_TOKEN_SECRET
+  config.consumer_key       = ENV['TWITTER_CONSUMER_KEY']
+  config.consumer_secret    = ENV['TWITTER_CONSUMER_SECRET']
+  config.oauth_token        = ENV['TWITTER_OAUTH_TOKEN']
+  config.oauth_token_secret = ENV['TWITTER_OAUTH_TOKEN_SECRET']
   config.auth_method        = :oauth
 end
 
