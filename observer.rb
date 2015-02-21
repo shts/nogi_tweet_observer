@@ -41,7 +41,9 @@ end
 
 EM.run do
   client = TweetStream::Client.new
-  client.follow(317684165) do |status|
+  # 1628167232
+  # 317684165 -> 本番
+  client.follow(1628167232) do |status|
     puts "#{status.user.screen_name}: #{status.text}"
 
     url = replace_uri(status.text)
