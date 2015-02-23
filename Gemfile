@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-# プロセス管理
+ruby '2.0.0'
 gem 'foreman'
 gem 'tweetstream'
 gem 'parse-ruby-client'
